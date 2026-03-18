@@ -1,0 +1,34 @@
+{
+  "home": {
+    "title": "Home",
+    "intro": "This is the home page. Here is a simple data list:",
+    "upcomingEventsTitle": "Upcoming Events",
+    "upcomingEventsIntro": "Your next scheduled events are listed below."
+  },
+  "profile": {
+    "title": "Profile",
+    "intro": "Welcome to your profile page. You can add more profile details here.",
+    "name": "Name: Jane Doe",
+    "email": "Email: jane.doe@example.com",
+    "memberSince": "Member since: 2026"
+  },
+  "calendar": {
+    "title": "Calendar",
+    "intro": "This is a placeholder for the calendar page.",
+    "noEvents": "No events yet. Add your schedule here.",
+    "addEventButton": "+ Add Event",
+    "addEventButtonMobile": "+"
+  },
+  "events": {
+    "sprintPlanning": "Sprint Planning",
+    "designReview": "Design Review",
+    "teamSync": "Team Sync"
+  },
+  "app": {
+    "settingsPlaceholder": "Settings page placeholder",
+    "helpPlaceholder": "Help page placeholder"
+  },
+  "common": {
+    "dateTimeSeparator": " • "
+  }
+}
