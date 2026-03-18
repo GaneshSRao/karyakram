@@ -6,13 +6,13 @@ export default function Home() {
   ]
 
   return (
-    <div className="container mt-4">
-      <div className="card p-3">
-        <h1 className="card-title">Home</h1>
-        <p className="card-text">This is the home page. Here is a simple data list:</p>
-        <ul className="list-group">
+    <div className="space-y-4">
+      <div className="rounded-lg border border-slate-200 p-6 bg-white shadow-sm">
+        <h1 className="text-2xl font-bold text-slate-800">Home</h1>
+        <p className="text-slate-600">This is the home page. Here is a simple data list:</p>
+        <ul className="mt-4 space-y-2">
           {users.map((user) => (
-            <li key={user.id} className="list-group-item">
+            <li key={user.id} className="rounded-md border border-slate-200 p-3 bg-slate-50">
               <strong>{user.name}</strong> — {user.role} ({user.team})
             </li>
           ))}
