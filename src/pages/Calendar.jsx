@@ -20,11 +20,12 @@ export default function CalendarPage() {
 
   const firstDay = new Date(current.getFullYear(), current.getMonth(), 1)
   const daysInMonth = new Date(current.getFullYear(), current.getMonth() + 1, 0).getDate()
+  const formatTwoDigit = (value) => String(value).padStart(2, '0')
 
   const days = useMemo(() => {
     return Array.from({ length: daysInMonth }, (_, i) => {
       const day = i + 1
-      const dateKey = `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
+      const dateKey = `${current.getFullYear()}-${formatTwoDigit(current.getMonth() + 1)}-${formatTwoDigit(day)}`
       const dayEvents = events.filter((event) => event.date === dateKey)
       return { day, dayEvents }
     })
@@ -40,9 +41,9 @@ export default function CalendarPage() {
 
   return (
     <div className="space-y-4 relative">
-      <div className="rounded-lg border border-slate-200 p-6 bg-white shadow-sm">
+      <div className="rounded-lg border border-slate-200 p-3 bg-white shadow-sm">
         <div className="mb-4 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center ">
             <button
               onClick={prevMonth}
               aria-label="Previous month"
@@ -50,7 +51,7 @@ export default function CalendarPage() {
             >
               <i className="fa fa-chevron-left" aria-hidden="true" />
             </button>
-            <div className="flex-1 text-center min-w-[220px]">
+            <div className="flex-1 text-center min-w-[200px]">
               <div className="text-xl font-semibold text-slate-800">{monthNames[current.getMonth()]}</div>
               <div className="text-sm text-slate-500">{current.getFullYear()}</div>
             </div>
@@ -77,7 +78,7 @@ export default function CalendarPage() {
             <div key={day} className="rounded-lg border border-slate-200 bg-slate-50 overflow-hidden">
               <div className="flex items-stretch">
                 <div className="flex flex-none items-center justify-center bg-slate-200 px-3 text-xl font-bold text-slate-700">
-                  {day}
+                  {formatTwoDigit(day)}
                 </div>
                 <div className="flex-1 p-3">
                   <div className="text-slate-700">{monthNames[current.getMonth()]} {current.getFullYear()}</div>

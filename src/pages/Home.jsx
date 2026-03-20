@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div className="space-y-4 md:flex md:flex-wrap md:items-start md:gap-4">
-      <div className="w-full rounded-lg border border-slate-200 p-6 bg-white shadow-sm">
+      <div className="w-full rounded-lg border border-slate-200 p-3 bg-white shadow-sm">
         <h1 className="text-2xl font-bold text-slate-800">{labels.home.title}</h1>
         <p className="text-slate-600">{labels.home.intro}</p>
       </div>
